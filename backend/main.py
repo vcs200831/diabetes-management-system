@@ -66,6 +66,10 @@ def create_token() -> str:
     return uuid.uuid4().hex
 
 app = FastAPI(title="Complete Project v2 - FastAPI Backend (Kids Zone)")
+# 👉 Add homepage route here
+@app.get("/")
+def home():
+    return {"message": "Kids Diabetes API Running Successfully"}
 
 from fastapi.middleware.cors import CORSMiddleware
 
