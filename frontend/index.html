@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Health App - Main</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Health App (Kids Zone included)</h1>
+    <div id="auth" class="card">
+      <h2>Register</h2>
+      <input id="reg_username" placeholder="username">
+      <input id="reg_password" placeholder="password" type="password">
+      <button id="btn_register">Register</button>
+      <div id="reg_msg" class="msg"></div>
+
+      <h2>Login</h2>
+      <input id="login_username" placeholder="username">
+      <input id="login_password" placeholder="password" type="password">
+      <button id="btn_login">Login</button>
+      <div id="login_msg" class="msg"></div>
+    </div>
+
+    <div id="app_area" style="display:none;">
+      <div class="card">
+        <button id="btn_kids">Kids Zone</button>
+        <button id="btn_report">Weekly Report</button>
+        <button id="btn_logout">Logout</button>
+      </div>
+
+      <div class="card" id="dashboard_card">
+        <h2>Dashboard</h2>
+        <div id="dash"></div>
+      </div>
+
+      <div class="card">
+        <h3>Log Glucose</h3>
+        <input id="gl_value" placeholder="mg/dL (e.g. 120)">
+        <input id="gl_note" placeholder="note (optional)">
+        <button id="btn_save_gl">Save</button>
+        <div id="gl_msg" class="msg"></div>
+        <div id="gl_list"></div>
+      </div>
+
+      <div class="card">
+        <h3>Reminders</h3>
+        <input id="rem_title" placeholder="Reminder title">
+        <input id="rem_time" placeholder="YYYY-MM-DDTHH:MM (UTC)">
+        <button id="btn_add_rem">Add</button>
+        <div id="rem_list"></div>
+      </div>
+
+      <div class="card">
+        <h3>Doctor Chat</h3>
+        <div id="chat_box" class="chat_box"></div>
+        <input id="chat_input" placeholder="Ask...">
+        <button id="btn_send_chat">Send</button>
+        <button id="btn_load_history">Load History</button>
+      </div>
+    </div>
+
+    <div id="status" class="status"></div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
